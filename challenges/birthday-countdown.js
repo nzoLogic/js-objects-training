@@ -34,3 +34,20 @@
 */
 
 // YOUR CODE HERE
+function daysUntilDate(date){
+ var currentDate = Date.now(),
+    date = Date.parse(date),
+    newDate = currentDate - date;
+    newDate = Math.round(Math.ceil(newDate / (8.64 * Math.pow(10, 7))));
+
+ return newDate;
+}
+
+console.log(daysUntilDate('12/09/1991'));
+//get current date
+
+//get friends date
+
+///subtract friends date from current date
+
+//return difference
