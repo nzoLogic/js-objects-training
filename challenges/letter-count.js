@@ -31,3 +31,28 @@
 */
 
 // YOUR CODE HERE
+
+function letterCount(string){
+  string = string.split('');
+
+  var obj = {},
+      stringLength = string.length;
+  string.forEach(function(ch){
+    if(!obj[ch]){
+      obj[ch] = toPercent(1, stringLength);
+    }
+    else {
+      obj[ch] += toPercent(obj[ch], stringLength);
+    }
+
+  });
+  console.log(obj);
+
+}
+
+  function toPercent(n, total){
+    return n / total;
+  }
+var word = letterCount('aaron');
+
+console.log(word);
